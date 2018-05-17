@@ -20,9 +20,6 @@ function setDate(){
     console.log(`${hour}  ${minutes}  ${seconds}`)
     console.log(secondsDegrees)
 
-    // if (secondsDegrees == 446){
-    //     console.log('hiiii')
-    //     hourDegrees === 0    }
-
+   
 }
 setInterval(setDate, 1000);
