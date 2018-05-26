@@ -23,8 +23,9 @@ html {
 
 
   input:checked + p {
-    background:rgb(216, 108, 108);
+    background:rgb(61, 61, 61);
     text-decoration: line-through;
+    color: #D1E2FF
   }
 
   input[type="checkbox"] {
