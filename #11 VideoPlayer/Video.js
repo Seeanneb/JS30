@@ -38,13 +38,16 @@ function scrub(e){
     console.log(e)
 }
 
-// function goFullscreen(){
-//     const full = [maxWidth = 'none', width = '100%']
-//     const normal = [maxWidth = '750px', width = 'auto']
-//     player.style = full
-//     console.log(player.style = full)
-    
-// }
+function goFullscreen(){
+    const icon = fullscreen.innerHTML = '-><-'
+    player.style.maxWidth = 'none';
+    player.style.width = '100%'
+}
+function goNormal(){
+    const icon = fullscreen.innerHTML = '<-->'
+    player.style.maxWidth = '750px';
+    player.style.width = '50%'
+}
 
 
 video.addEventListener('click', togglePlay);
@@ -62,4 +65,10 @@ progress.addEventListener('click', () => {mousedown && scrub(e)})
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
 
+let isFullscreen = false
+
+fullscreen.addEventListener('click', () => {isFullscreen ? goNormal() : goFullscreen()})
+fullscreen.addEventListener('click', () => isFullscreen = !isFullscreen)
+
+console.log(`fullscreen ${isFullscreen}`)
 // fullscreen.addEventListener('click', goFullscreen)
